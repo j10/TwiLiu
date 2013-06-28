@@ -1,7 +1,6 @@
 #import "TwiLiuAPIClient.h"
 #import "AFJSONRequestOperation.h"
-
-static NSString * const kTwiLiuAPIBaseURLString = @"<# API Base URL #>";
+#import "TwiLiuKeys.h"
 
 @implementation TwiLiuAPIClient
 
@@ -9,7 +8,7 @@ static NSString * const kTwiLiuAPIBaseURLString = @"<# API Base URL #>";
     static TwiLiuAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kTwiLiuAPIBaseURLString]];
+        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kTwilioBaseURLString]];
     });
     
     return _sharedClient;
@@ -22,6 +21,7 @@ static NSString * const kTwiLiuAPIBaseURLString = @"<# API Base URL #>";
     }
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [self setAuthorizationHeaderWithUsername:kTwilioAccountSID password:kTwilioAuthToken];
     [self setDefaultHeader:@"Accept" value:@"application/json"];
     
     return self;
@@ -42,6 +42,30 @@ static NSString * const kTwiLiuAPIBaseURLString = @"<# API Base URL #>";
     // Customize the response object to fit the expected attribute keys and values  
     
     return mutablePropertyValues;
+}
+
+#pragma mark - Write methods 
+
+- (NSDictionary *)representationOfAttributes:(NSDictionary *)attributes ofManagedObject:(NSManagedObject *)managedObject
+{
+    NSMutableDictionary *mutablePropertyValues = [[super representationOfAttributes:attributes ofManagedObject:managedObject] mutableCopy];
+    
+    NSLog(@"POST representationOfAttributes: attributes %@, managedObject %@, mutable property values %@", attributes, managedObject, mutablePropertyValues);
+    
+    return mutablePropertyValues;
+}
+
+- (NSMutableURLRequest *)requestForInsertedObject:(NSManagedObject *)insertedObject {
+    NSMutableURLRequest *mutableURLRequest = nil;
+    
+    NSString *path = kTwilioCallURLPath;
+    NSDictionary *parameters = @{@"From": kTwilioFromPhoneNumber,
+                                 @"To": [insertedObject valueForKey:@"to"],
+                                 @"Url": kTwilioUrl};
+    mutableURLRequest = [self requestWithMethod:@"POST" path:path parameters:parameters];    
+    
+    NSLog(@"Sending insert request to %@ with parameters %@", mutableURLRequest.URL.description, parameters);
+    return mutableURLRequest;
 }
 
 - (BOOL)shouldFetchRemoteAttributeValuesForObjectWithID:(NSManagedObjectID *)objectID

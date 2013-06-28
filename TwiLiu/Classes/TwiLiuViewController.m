@@ -7,6 +7,7 @@
 //
 
 #import "TwiLiuViewController.h"
+#import "Call.h"
 
 @interface TwiLiuViewController () {
     NSString *_lastPhoneNumber;
@@ -134,8 +135,14 @@
 {
     NSString *response = @"Calling you now";
     [self typeResponse:response];
-    
     _lastPhoneNumber = phoneNumber;
+    
+    NSManagedObjectContext *moc = [(id)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    [moc performBlock:^{
+        Call *call = [NSEntityDescription insertNewObjectForEntityForName:@"Call" inManagedObjectContext:moc];
+        [call setValue:[NSString stringWithFormat:@"+1%@",phoneNumber] forKey:@"to"];
+        [moc save:nil];
+    }];
 }
 
 - (void)redial
