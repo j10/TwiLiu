@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
 #import "AFNetworkActivityIndicatorManager.h"
+#import "TwiLiuViewController.h"
 
 @implementation AppDelegate
 
@@ -24,7 +24,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
-    UIViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    TwiLiuViewController *viewController = [TwiLiuViewController new];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
