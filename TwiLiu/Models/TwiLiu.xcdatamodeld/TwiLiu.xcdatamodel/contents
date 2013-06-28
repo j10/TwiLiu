@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Call" syncable="YES">
+    <entity name="Call" representedClassName="Call" syncable="YES">
         <attribute name="account_sid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answered_by" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="caller_name" optional="YES" attributeType="String" syncable="YES"/>
