@@ -33,27 +33,7 @@
     return responseObject;
 }
 
-- (NSDictionary *)attributesForRepresentation:(NSDictionary *)representation 
-                                     ofEntity:(NSEntityDescription *)entity 
-                                 fromResponse:(NSHTTPURLResponse *)response 
-{
-    NSMutableDictionary *mutablePropertyValues = [[super attributesForRepresentation:representation ofEntity:entity fromResponse:response] mutableCopy];
-    
-    // Customize the response object to fit the expected attribute keys and values  
-    
-    return mutablePropertyValues;
-}
-
-#pragma mark - Write methods 
-
-- (NSDictionary *)representationOfAttributes:(NSDictionary *)attributes ofManagedObject:(NSManagedObject *)managedObject
-{
-    NSMutableDictionary *mutablePropertyValues = [[super representationOfAttributes:attributes ofManagedObject:managedObject] mutableCopy];
-    
-    NSLog(@"POST representationOfAttributes: attributes %@, managedObject %@, mutable property values %@", attributes, managedObject, mutablePropertyValues);
-    
-    return mutablePropertyValues;
-}
+#pragma mark - Write methods
 
 - (NSMutableURLRequest *)requestForInsertedObject:(NSManagedObject *)insertedObject {
     NSMutableURLRequest *mutableURLRequest = nil;

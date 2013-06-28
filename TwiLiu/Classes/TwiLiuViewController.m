@@ -35,15 +35,15 @@
     self.delegate = self;
     self.dataSource = self;
     
-    self.title = @"1 Minute";
+    self.title = @"Rescue Me!";
     _lastPhoneNumber = nil;
     
     self.messages = [[NSMutableArray alloc] initWithObjects:
                      @"Hi, this is a fake conversation",
                      @"Use this app to receive a real phone call and exit awkward situations \U0001f604 \U0001f4de",
                      @"U mean like long meetings \U0001f4a4 or bad dates \U0001f47d?!",
-                     @"Yes!  You can click on the title bar to change the delay before you are called",
-                     @"Type your 10-digit US phone number below",
+                     @"Yes! Just type your 10-digit US phone number below",
+                     @"And press the Redial button to receive another call",
                      nil];
     
     self.timestamps = [[NSMutableArray alloc] initWithObjects:
@@ -55,7 +55,18 @@
                        nil];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Redial" style:UIBarButtonItemStyleBordered target:self action:@selector(redial)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(showAboutAlert:)];
+}
+
+- (IBAction)showAboutAlert:(id)sender
+{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"About this app"
+                                                      message:@"Just testing out Twilio"
+                                                     delegate:self
+                                            cancelButtonTitle:nil
+                                            otherButtonTitles:@"OK", nil];
+    message.alertViewStyle = UIAlertViewStyleDefault;
+    [message show];
 }
 
 #pragma mark - Table view data source

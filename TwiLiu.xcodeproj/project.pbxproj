@@ -35,11 +35,11 @@
 		127DF579177D6C980028A0DA /* TwiLiu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 127DF577177D6C980028A0DA /* TwiLiu.xcdatamodeld */; };
 		127DF580177D6D490028A0DA /* Call.m in Sources */ = {isa = PBXBuildFile; fileRef = 127DF57C177D6D490028A0DA /* Call.m */; };
 		127DF581177D6D490028A0DA /* _Call.m in Sources */ = {isa = PBXBuildFile; fileRef = 127DF57F177D6D490028A0DA /* _Call.m */; };
-		127DF58F177D6EC60028A0DA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF58C177D6EC60028A0DA /* Default-568h@2x.png */; };
-		127DF590177D6EC60028A0DA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF58D177D6EC60028A0DA /* Default.png */; };
-		127DF591177D6EC60028A0DA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF58E177D6EC60028A0DA /* Default@2x.png */; };
 		127DF598177D6FDB0028A0DA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF596177D6FDB0028A0DA /* Icon.png */; };
 		127DF599177D6FDB0028A0DA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF597177D6FDB0028A0DA /* Icon@2x.png */; };
+		127DF59E177D874F0028A0DA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF59B177D874F0028A0DA /* Default-568h@2x.png */; };
+		127DF59F177D874F0028A0DA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF59C177D874F0028A0DA /* Default.png */; };
+		127DF5A0177D874F0028A0DA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DF59D177D874F0028A0DA /* Default@2x.png */; };
 		287AC982862F4965B3A454DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E01933D834244C4BD5AA89A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,12 +67,12 @@
 		127DF57C177D6D490028A0DA /* Call.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Call.m; sourceTree = "<group>"; };
 		127DF57E177D6D490028A0DA /* _Call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Call.h; sourceTree = "<group>"; };
 		127DF57F177D6D490028A0DA /* _Call.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Call.m; sourceTree = "<group>"; };
-		127DF58C177D6EC60028A0DA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		127DF58D177D6EC60028A0DA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		127DF58E177D6EC60028A0DA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		127DF596177D6FDB0028A0DA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		127DF597177D6FDB0028A0DA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		127DF59A177D73DF0028A0DA /* TwiLiuKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwiLiuKeys.h; sourceTree = "<group>"; };
+		127DF59B177D874F0028A0DA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		127DF59C177D874F0028A0DA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		127DF59D177D874F0028A0DA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6E01933D834244C4BD5AA89A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D929425C0147B2843DF3C1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -144,9 +144,9 @@
 				127DF553177D5EE00028A0DA /* TwiLiu-Info.plist */,
 				127DF554177D5EE00028A0DA /* InfoPlist.strings */,
 				127DF557177D5EE00028A0DA /* main.m */,
-				127DF58C177D6EC60028A0DA /* Default-568h@2x.png */,
-				127DF58D177D6EC60028A0DA /* Default.png */,
-				127DF58E177D6EC60028A0DA /* Default@2x.png */,
+				127DF59B177D874F0028A0DA /* Default-568h@2x.png */,
+				127DF59C177D874F0028A0DA /* Default.png */,
+				127DF59D177D874F0028A0DA /* Default@2x.png */,
 				127DF596177D6FDB0028A0DA /* Icon.png */,
 				127DF597177D6FDB0028A0DA /* Icon@2x.png */,
 			);
@@ -260,11 +260,11 @@
 			files = (
 				127DF54C177D5EE00028A0DA /* Podfile in Resources */,
 				127DF556177D5EE00028A0DA /* InfoPlist.strings in Resources */,
-				127DF58F177D6EC60028A0DA /* Default-568h@2x.png in Resources */,
-				127DF590177D6EC60028A0DA /* Default.png in Resources */,
-				127DF591177D6EC60028A0DA /* Default@2x.png in Resources */,
 				127DF598177D6FDB0028A0DA /* Icon.png in Resources */,
 				127DF599177D6FDB0028A0DA /* Icon@2x.png in Resources */,
+				127DF59E177D874F0028A0DA /* Default-568h@2x.png in Resources */,
+				127DF59F177D874F0028A0DA /* Default.png in Resources */,
+				127DF5A0177D874F0028A0DA /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
